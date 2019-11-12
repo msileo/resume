@@ -1,0 +1,104 @@
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/bootstrap-grid';
+@import 'node_modules/bootstrap/scss/utilities/text';
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --seafoam: #9fd8d8;
+}
+
+html,
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-family: 'Segoe UI', helvetica, arial, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /*zoom: 94.75%;*/ /* Used for printing in Chrome */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1.4257;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  list-style: square;
+}
+
+.resume-content-section {
+  padding-right: 3rem;
+}
+
+.resume-header-row {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  align-items: center;
+}
+
+.resume-section-header {
+  border-bottom: 1px solid var(--black);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.resume-item-header {
+  font-size: 1.2rem;
+}
+
+.resume-item-subheader,
+.resume-section-body {
+  font-size: 0.9rem;
+  padding-bottom: 1rem;
+}
+
+.resume-highlight-section {
+  background-color: var(--seafoam);
+  padding: 2rem;
+}
+
+.name {
+  font-size: 3.6rem;
+}
+
+.last-name {
+  margin-top: -2rem;
+}
+
+/* ----------------------------------------------Print---------------------------------------------------------------------*/
+
+@media print {
+  html,
+  body {
+    background-color: #fff;
+    font-family: 'Segoe UI', helvetica, arial, sans-serif;
+
+    -webkit-print-color-adjust: exact;
+  }
+  .name {
+    font-size: 2.4rem;
+  }
+  .last-name {
+    margin-top: -1.4rem;
+  }
+  .contact-info {
+    font-size: 0.8rem;
+    div {
+      line-height: 1;
+    }
+  }
+}
