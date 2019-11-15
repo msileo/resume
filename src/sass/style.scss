@@ -79,6 +79,11 @@ ul {
   margin-top: -2rem;
 }
 
+.external-link-icon {
+  height: 0.7rem;
+  margin-left: 0.1rem;
+}
+
 /* ----------------------------------------------Print---------------------------------------------------------------------*/
 
 @media print {
@@ -97,8 +102,8 @@ ul {
   }
   .contact-info {
     font-size: 0.8rem;
-    div {
-      line-height: 1;
-    }
+  }
+  .resume-section-header.project-highlights {
+    padding-top: 2rem;
   }
 }

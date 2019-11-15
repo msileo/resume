@@ -1,4 +1,4 @@
-const { dest, src, series, task } = require('gulp');
+const { dest, src, series, parallel, task } = require('gulp');
 
 // Include plugins
 const autoprefixer = require('gulp-autoprefixer');
@@ -35,9 +35,12 @@ task('minifyCSS', () => {
 
 task('sassify', series('processSass', 'minifyCSS'));
 
-// Clean
+// Publish files
 task('html', () => {
   return src('./src/index.html').pipe(dest('./public/'));
 });
+task('assets', () => {
+  return src('./src/assets/*').pipe(dest('./public/assets'));
+});
 
-task('build', series('sassify', 'html'));
+task('build', parallel('sassify', 'html', 'assets'));
