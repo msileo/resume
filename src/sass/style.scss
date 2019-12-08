@@ -89,7 +89,7 @@ ul {
 @media print {
   html,
   body {
-    background-color: #fff;
+    background-color: var(--white);
     font-family: 'Segoe UI', helvetica, arial, sans-serif;
 
     -webkit-print-color-adjust: exact;
